@@ -27,3 +27,5 @@ Although individuals with ADHD are the main focus of this software, it could als
 - [Lab 1](labs/)
 - [Glossary](glossary/)
 - [References](references/)
+- [ODU Website](https://www.odu.edu)
+- [ODU Computer Science Department Website](https://www.odu.edu)
