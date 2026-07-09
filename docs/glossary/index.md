@@ -28,3 +28,5 @@ title: Gold Star Glossary
 - Routine: A sequence of actions regularly followed, or a fixed program.
 - Task Deviation: When a task has an unexpected change regarding completion. A task may be accomplished out of order in one’s schedule, or it may not be accomplished at all.
 - Visual Studio Code (VSCode): A development environment used for software engineering and web development.
+
+[Return to Homepage](../)
