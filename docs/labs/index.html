@@ -8,6 +8,12 @@ title: Labs
   body {
     text-align: center;
   }
+
+  .pdf-container {
+    width: 100%;
+    height: 800px;
+    border: none;
+}
   
   
 </style>
@@ -16,8 +22,49 @@ title: Labs
 
 <embed class="pdf" src="CS411W_Updates_and_Review.pdf" width="500" height="800">
 
-<h3>Aaron Brackett</h3>
-<embed class="pdf" src="CS411W_Lab1_Version_1(Brackett).pdf" width="500" height="800">
+
+  <label for="student-select">Select a student to see their Lab.</label>
+  <select id="student-select">
+    <option value="">--Please choose a student--</option>
+    <option value="studentLabsPDF/Matthew_Allen.pdf">Matthew Allen</option>
+    <option value="studentLabsPDF/Aaron_Brackett.pdf">Aaron Brackett</option>
+    <option value="studentLabsPDF/Maggie_Bragg.pdf">Maggie Bragg</option>
+    <option value="studentLabsPDF/Jeffrey_Bucher.pdf">Jeffrey Bucher</option>
+    <option value="studentLabsPDF/Autumn_Carey.pdf">Autumn Carey</option>
+    <option value="studentLabsPDF/Evelyn_Faye.pdf">Evelyn Faye</option>
+    <option value="studentLabsPDF/Miguel_Looney.pdf">Miguel Looney</option>
+    <option value="studentLabsPDF/Lydia_Nebuchadnezzar.pdf">Lydia Nebuchadnezzar</option>
+</select>
+
+<!-- container where documents will be displayed -->
+    <div id="viewerContainer" style="display: none;">
+    <h3>Viewing Document:</h3>
+    <iframe id="pdfViewer" src="" class="pdf-container"></iframe>
+</div>
+
+    
+    <script>
+        const selector = document.getElementById('student-select');
+        const viewerContainer = document.getElementById('viewerContainer');
+        const pdfViewer = document.getElementById('pdfViewer');
+
+        // Listen for when the user picks a new option
+        selector.addEventListener('change', function() {
+            const selectedPdfUrl = this.value;
+
+            if (selectedPdfUrl) {
+                // Update the PDF source path and reveal the container
+                pdfViewer.src = selectedPdfUrl;
+                viewerContainer.style.display = 'block';
+            } else {
+                // Hide the container if they pick the default empty option
+                viewerContainer.style.display = 'none';
+                pdfViewer.src = '';
+            }
+        });
+    </script>
+
+
 
 <p>
   <a href="../">Return to Homepage</a>
