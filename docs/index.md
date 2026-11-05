@@ -27,6 +27,7 @@ Although individuals with ADHD are the main focus of this software, it could als
 - [Labs](labs/)
 - [Glossary](glossary/)
 - [References](references/)
-- [User Manual - Lab 3 & Lab 4](https://mrallen-cs.github.io/cs411w-gold-lab3/)
+- [User Manual - Lab 3 & Lab 4: GitHub Pages Version](https://mrallen-cs.github.io/cs411w-gold-lab3/)
+- [User Manual - Lab 3 & Lab 4: GitHub Wiki Version](https://github.com/mrallen-cs/cs411w-gold-lab3/wiki)
 - [ODU Website](https://www.odu.edu)
 - [ODU Computer Science Department Website](https://www.odu.edu)
