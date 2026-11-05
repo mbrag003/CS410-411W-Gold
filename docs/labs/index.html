@@ -14,15 +14,20 @@ title: Labs
     height: 800px;
     border: none;
 }
+
   
   
 </style>
 
 <h1>Lab 1</h1>
-
+<div style="display: flex; gap: 20px; justify-content: center;">
 <embed class="pdf" src="CS411W_Updates_and_Review.pdf" width="500" height="800">
-<br><br>
+<embed class="pdf" src="CS411W_Lab2_Section3.pdf" width="500" height="800">
+</div>
 
+<div style="display: flex; gap: 20px;">
+
+<div style="flex: 1">
   <label for="student-select">Select a student to see their Lab 1.</label>
   <select id="student-select">
     <option value="">--Please choose a student--</option>
@@ -41,27 +46,30 @@ title: Labs
     <h3>Viewing Document:</h3>
     <iframe id="pdfViewer" src="" class="pdf-container"></iframe>
 </div>
-<br><br>
-<br><br>
+</div>
 
+
+<div style="flex: 1;">
 <!-- This is for Lab 2 Section 1 & 2 -->
-<label for="student-select">Select a student to see their Lab 2 Sections 1 & 2.</label>
-  <select id="student-select">
+<label for="student-select-2">Select a student to see their Lab 2 Sections 1 & 2.</label>
+  <select id="student-select-2">
     <option value="">--Please choose a student--</option>
-    <option value="studentLab2PDF/Matthew_Allen.pdf">Matthew Allen</option>
-    <option value="studentLab2PDF/Aaron_Brackett.pdf">Aaron Brackett</option>
-    <option value="studentLab2PDF/Maggie_Bragg.pdf">Maggie Bragg</option>
-    <option value="studentLab2PDF/Jeffrey_Bucher.pdf">Jeffrey Bucher</option>
-    <option value="studentLab2PDF/Autumn_Carey.pdf">Autumn Carey</option>
-    <option value="studentLab2PDF/Evelyn_Faye.pdf">Evelyn Faye</option>
-    <option value="studentLab2PDF/Miguel_Looney.pdf">Miguel Looney</option>
-    <option value="studentLab2PDF/Lydia_Nebuchadnezzar.pdf">Lydia Nebuchadnezzar</option>
+    <option value="Lab2PDFs/Matthew_Allen.pdf">Matthew Allen</option>
+    <option value="Lab2PDFs/Aaron_Brackett.pdf">Aaron Brackett</option>
+    <option value="Lab2PDFs/Maggie_Bragg.pdf">Maggie Bragg</option>
+    <option value="Lab2PDFs/Jeffrey_Bucher.pdf">Jeffrey Bucher</option>
+    <option value="Lab2PDFs/Autumn_Carey.pdf">Autumn Carey</option>
+    <option value="Lab2PDFs/Evelyn_Faye.pdf">Evelyn Faye</option>
+    <option value="Lab2PDFs/Miguel_Looney.pdf">Miguel Looney</option>
+    <option value="Lab2PDFs/Lydia_Nebuchadnezzar.pdf">Lydia Nebuchadnezzar</option>
 </select>
 
 <!-- container where documents will be displayed -->
-    <div id="viewerContainer" style="display: none;">
+    <div id="viewerContainer-2" style="display: none;">
     <h3>Viewing Document:</h3>
-    <iframe id="pdfViewer" src="" class="pdf-container"></iframe>
+    <iframe id="pdfViewer-2" src="" class="pdf-container"></iframe>
+</div>
+</div>
 </div>
 <br><br>
 <br><br>
@@ -86,6 +94,26 @@ title: Labs
                 // Hide the container if they pick the default empty option
                 viewerContainer.style.display = 'none';
                 pdfViewer.src = '';
+            }
+        });
+
+
+        const selector2 = document.getElementById('student-select-2');
+        const viewerContainer2 = document.getElementById('viewerContainer-2');
+        const pdfViewer2 = document.getElementById('pdfViewer-2');
+
+        // Listen for when the user picks a new option
+        selector2.addEventListener('change', function() {
+            const selectedPdfUrl2 = this.value;
+
+            if (selectedPdfUrl2) {
+                // Update the PDF source path and reveal the container
+                pdfViewer2.src = selectedPdfUrl2;
+                viewerContainer2.style.display = 'block';
+            } else {
+                // Hide the container if they pick the default empty option
+                viewerContainer2.style.display = 'none';
+                pdfViewer2.src = '';
             }
         });
     </script>
